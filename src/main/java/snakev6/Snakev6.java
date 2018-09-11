@@ -63,6 +63,7 @@ public class Snakev6 extends JFrame {
 
                 try {
                     new Snakev6();
+            
                 } catch (SQLException ex) {
                 }
 
