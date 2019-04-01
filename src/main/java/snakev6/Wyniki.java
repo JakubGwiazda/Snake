@@ -133,9 +133,9 @@ public class Wyniki extends JPanel implements ActionListener {
 
         g.setColor(Color.WHITE);
         g.drawRect(MARGINES_LEWY, MARGINES_GORNY_TYTUL, DLUGOSCX, WYSOKOSC_OBRAZKA_TYTULU);//utworzenie prostokata w ktorym znajduje sie logo gry
+        g.drawImage(Gra.getNazwa(), MARGINES_LEWY, MARGINES_GORNY_TYTUL, DLUGOSCX, WYSOKOSC_OBRAZKA_TYTULU, this);//rysuje nazwe gry 
 
     }
-//dziala
 
     public static void bazaDanych() throws SQLException {
         polaczenie = DriverManager.getConnection("jdbc:sqlite:wyniki.db");
@@ -149,14 +149,7 @@ public class Wyniki extends JPanel implements ActionListener {
                 + ");";
 
         statment.execute(sql);
-//        zapiszWynik(polaczenie, "Kuba", 213123);
-        // to zapytanie nie działa????
-//        statment.execute("CREATE TABLE IF NOT EXISTS wynikiGry (\n"
-//                + "	Lp	INTEGER  AUTOINCREMENT ,\n"
-//                + "	Nick	TEXT,\n"
-//                + "	Punkty INTEGER,\n"
-//                + "	PRIMARY KEY(Lp)\n"
-//                + ");");
+
 
     }
 
